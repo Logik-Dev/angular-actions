@@ -37,7 +37,6 @@ jobs:
         cache: 'npm'
     - run: npm ci
     - run: npm run build --if-present
-    - run: echo ${{ github.repository
     - name: downcase REPO
       run: |
           echo "REPO=${GITHUB_REPOSITORY,,}" >>${GITHUB_ENV}
