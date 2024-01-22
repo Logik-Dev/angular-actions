@@ -40,7 +40,7 @@ jobs:
     - name: downcase REPO
       run: |
           echo "REPO=${GITHUB_REPOSITORY,,}" >>${GITHUB_ENV}
-    - run: docker build -t ghcr.io/${{ REPO }}:latest .
+    - run: docker build -t ghcr.io/${{ github.repository }}:latest .
     - run: docker push ghcr.io/${{ github.repository }}:latest
 
 
